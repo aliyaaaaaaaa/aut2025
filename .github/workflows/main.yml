@@ -16,3 +16,8 @@ jobs:
         run: |
           docker run -d -p 4444:4444 --name selenium selenium/standalone-firefox
 
+      - name: Run Selenium Test
+        run: |
+          python tests/hello_example.py
+
+
