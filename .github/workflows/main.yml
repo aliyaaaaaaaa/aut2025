@@ -11,3 +11,8 @@ jobs:
         run: |
           docker build -t aut .
           docker run -d -p 80:80 aut
+
+      - name: Deploy Selenium
+        run: |
+          docker run -d -p 4444:4444 --name selenium selenium/standalone-firefox
+
