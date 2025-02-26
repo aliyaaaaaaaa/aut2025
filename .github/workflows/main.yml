@@ -1,0 +1,13 @@
+name: Deploy AUT
+on: push
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Docker
+        run: |
+          docker build -t aut .
+          docker run -d -p 80:80 aut
