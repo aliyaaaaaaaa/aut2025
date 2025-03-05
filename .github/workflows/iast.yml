@@ -68,5 +68,5 @@ jobs:
               SONAR_TOKEN: 36e7aa27f04b7b6c27d591fbe6c0820d92b9845b
             with:
               args: >
-                -Dsonar.organization=anyaaa
-                -Dsonar.projectKey=anyaaa_aut2025
+                -Dsonar.organization=aliyaaaaaaaa
+                -Dsonar.projectKey=aliyaaaaaaaa_aut2025
