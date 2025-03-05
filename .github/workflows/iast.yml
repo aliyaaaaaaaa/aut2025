@@ -54,3 +54,19 @@ jobs:
               uses: github/codeql-action/upload-sarif@v2
               with:
                 sarif_file: results.sarif
+    sast-sonarcloud:
+        name: SAST - SonarCloud
+        permissions: write-all
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v4
+    
+          - name: Set up SonarCloud Scanner
+            uses: SonarSource/sonarcloud-github-action@master
+            env:
+              SONAR_TOKEN: 36e7aa27f04b7b6c27d591fbe6c0820d92b9845b
+            with:
+              args: >
+                -Dsonar.organization=anyaaa
+                -Dsonar.projectKey=anyaaa_aut2025
